@@ -15,7 +15,13 @@ theme = "chunkyPoster"
     identifier = "about"
     name = "About"
     url = "/about/"
-    weight = 0
+    weight = 5
+
+  [[menu.main]]
+      identifier = "post"
+      name = "Posts"
+      url = "/post/"
+      weight = 0
 
 [taxonomies]
 category = "categories"
