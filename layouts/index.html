@@ -1,0 +1,22 @@
+{{ define "main" }}
+<main class="homepage container py-6">
+
+
+    <section>
+      <h1>{{ .Site.Title }}</h1>
+    </section>
+
+
+
+    {{ range .Pages }}
+      <li>
+          <a href="{{.Permalink}}">{{.Date.Format "2006-01-02"}} | {{.Title}}</a>
+      </li>
+      {{ end }}
+
+
+
+
+
+</main>
+{{ end }}

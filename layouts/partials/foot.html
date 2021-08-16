@@ -19,6 +19,3 @@
     <script src="{{ "js/" | relURL }}{{ . }}"></script>
 {{ end }}
 
-{{ if or .Params.math .Site.Params.math }}
-    {{ partial "math.html" . }}
-{{ end }}
