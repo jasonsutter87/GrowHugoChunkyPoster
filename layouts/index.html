@@ -15,9 +15,17 @@
       {{ end }}
 
 
-    {{ range where .Pages "Section" "Blog" }}
+    <!-- {{ range where .Pages "Section" "Blog" }}
           <p> {{.Title}}</p>
-    {{ end }}
+    {{ end }} -->
+
+    <div class="row row-cols-1 row-cols-lg-3">
+        {{ range .Pages }}
+            <div class="col mb-3">
+                {{ .Render "card" }}
+            </div>
+        {{ end }}
+    </div>
 
 
 
