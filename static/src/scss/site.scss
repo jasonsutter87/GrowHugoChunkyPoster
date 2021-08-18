@@ -1,5 +1,17 @@
 $GrowBlue: #01a0c6;
 $white: #fff;
+$light: #e8e6e6;
+$black: #000;
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    color: $black;
+}
+
+.ul-reset {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
 
 .btn-primary {
   background-color: $GrowBlue !important;
@@ -13,5 +25,76 @@ $white: #fff;
   &:active{
     background-color: transparent !important;
     color: $GrowBlue;
+  }
+}
+
+.white-bg {
+    background-color: $white;
+}
+
+
+.light-bg {
+    background-color: $light;
+}
+
+
+#index-jumbotron-section{
+  margin-top: 56px;
+  padding: 50px 0;
+}
+
+#our-portfolio-section {
+  padding: 50px 0;
+}
+
+
+.testimonial-bg {
+  padding: 25px;
+  background-image: linear-gradient(to right, rgba(255,255,255,1) 0%, rgba(255,255,255,1) 28%, rgba(0,212,255,0) 100%),
+   url('https://picsum.photos/id/476/1200/300');
+   background-repeat: no-repeat;
+   background-size: cover;
+   background-position: center;
+}
+
+
+#cdss-section {
+  padding: 50px 0;
+
+
+  .cdss-tags {
+    background-color: $light;
+    padding: 5px;
+  }
+}
+
+
+#our-services-section{
+  padding: 50px 0;
+}
+
+#company-section{
+  padding: 50px 0;
+
+  .index-company-bg{
+    background-image: url('https://picsum.photos/id/350/500/500');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px;
+  }
+
+  .quote {
+    color: $GrowBlue;
+    font-size: 12px;
+  }
+
+  .company-author-quote::before {
+    content: ' ';
+    color: $GrowBlue;
+    margin: 0 15px 0 0;
+    border: 2px solid;
+    flex-wrap: nowrap;
+    flex-direction: row;
   }
 }

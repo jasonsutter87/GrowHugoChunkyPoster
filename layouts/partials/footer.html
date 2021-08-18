@@ -1,58 +1,49 @@
-<footer class="footer text-center bg-dark py-6">
-    <div class="container">
-        <div class="row">
-            <div class="col">
-                <ul class="list-inline">
-                    {{ if .Site.Params.social.rss -}}
-                    <li class="list-inline-item">
-                        {{- with .Site.GetPage "" -}}
-                            {{- with .OutputFormats.Get "RSS" -}}
-                                <a href="{{ .Permalink }}" rel="alternate" type="application/rss+xml" class="icons d-block">
-                                    <span class="fa-stack fa-lg">
-                                        <i class="fa fa-circle fa-stack-2x"></i>
-                                        <i class="fa fa-rss fa-stack-1x fa-inverse"></i>
-                                    </span>
-                                </a>
-                            {{- end -}}
-                        {{- end -}}
-                    </li>
-                    {{- end -}}
-                    {{- if .Site.Params.social.email -}}
-                    <li class="list-inline-item">
-                        <a href="mailto:{{ .Site.Params.social.email }}" class="icons d-block">
-                            <span class="fa-stack fa-lg">
-                                <i class="fa fa-circle fa-stack-2x"></i>
-                                <i class="fa fa-envelope fa-stack-1x fa-inverse"></i>
-                            </span>
-                        </a>
-                    </li>
-                    {{- end -}}
-                    {{- range $name, $path := .Site.Params.social -}}
-                        {{- if and $path (not (in (slice "rss" "email") $name)) -}}
-                        <li class="list-inline-item">
-                            <a href="{{ $path | safeURL }}" class="icons d-block">
-                                <span class="fa-stack fa-lg">
-                                    <i class="fa fa-circle fa-stack-2x"></i>
-                                    <i class="fab fa-{{ $name }} fa-stack-1x fa-inverse"></i>
-                                </span>
-                            </a>
-                        </li>
-                        {{- end -}}
-                    {{- end }}
-                </ul>
-
-                <p class="text-muted">
-                    {{ if .Site.Copyright }}
-                        {{ .Site.Copyright | safeHTML }}
-                    {{ else }}
-                        Copyright &copy; {{ .Site.Title }} {{ now.Year }}
-                    {{ end }}
-                </p>
-
-                <p class="text-muted">
-                Powered by <a href="https://gohugo.io" target="_blank">Hugo</a> with <a href="https://github.com/puresyntax71/hugo-theme-chunky-poster" target="_blank">Chunky Poster</a>.
-                </p>
-            </div>
-        </div>
+<footer>
+  <div class="container-fluid">
+    <div class="row justify-content-between">
+      <div class="col-12 col-lg-auto">
+        <p class="mb-1">200 Auburn Folsom Rd., Suite 300<br>
+        Auburn, CA 95603</p>
+        <p><a href="https://www.google.com/maps/dir//200+Auburn+Folsom+Rd+%23300,+Auburn,+CA+95603/@38.894719,-121.1472721,12z/data=!4m8!4m7!1m0!1m5!1m1!1s0x809b04d4ee025323:0x10263402e66a7dc7!2m2!1d-121.0772321!2d38.8947399" target="_blank">Directions</a></p>
+      </div>
+      <div class="col-12 col-lg-auto">
+        <p class="mb-1"><a href="/privacy-policy">privacy-policy</a></p>
+        <p class="mb-1"><a href="/privacy-policy">privacy-policy</a></p>
+        <p><a href="/privacy-policy">privacy-policy</a></p>
+      </div>
     </div>
+
+    <div class="row justify-content-between">
+      <div class="col-12 col-lg-auto">
+        <p>&copy; 2021 GROWDesign and Development, Inc.</p>
+      </div>
+      <div class="col-12 col-lg-auto">
+        <ul class="ul-reset d-flex">
+          <li>
+            <a href="https://www.facebook.com/" target="_blank"><i class="fab fa-facebook-f"></i>
+            <span class="sr-only">Facebook social Link</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="https://instagram.com/" target="_blank"><i class="fab fa-instagram"></i>
+            <span class="sr-only">instagram social Link</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://twitter.com/" target="_blank"><i class="fab fa-twitter"></i>
+            <span class="sr-only">Twitter social Link</span>
+            </a>
+          </li>
+
+          <li>
+            <a href="http://linkedin.com/" target="_blank"><i class="fab fa-linkedin-in"></i>
+            <span class="sr-only">Linkedin social Link</span>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
 </footer>

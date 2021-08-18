@@ -1,3 +1,11 @@
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+  color: #000; }
+
+.ul-reset {
+  margin: 0;
+  padding: 0;
+  list-style-type: none; }
+
 .btn-primary {
   background-color: #01a0c6 !important;
   padding: 10px 25px;
@@ -8,5 +16,53 @@
   .btn-primary:hover, .btn-primary:active {
     background-color: transparent !important;
     color: #01a0c6; }
+
+.white-bg {
+  background-color: #fff; }
+
+.light-bg {
+  background-color: #e8e6e6; }
+
+#index-jumbotron-section {
+  margin-top: 56px;
+  padding: 50px 0; }
+
+#our-portfolio-section {
+  padding: 50px 0; }
+
+.testimonial-bg {
+  padding: 25px;
+  background-image: linear-gradient(to right, white 0%, white 28%, rgba(0, 212, 255, 0) 100%), url("https://picsum.photos/id/476/1200/300");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center; }
+
+#cdss-section {
+  padding: 50px 0; }
+  #cdss-section .cdss-tags {
+    background-color: #e8e6e6;
+    padding: 5px; }
+
+#our-services-section {
+  padding: 50px 0; }
+
+#company-section {
+  padding: 50px 0; }
+  #company-section .index-company-bg {
+    background-image: url("https://picsum.photos/id/350/500/500");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: 500px; }
+  #company-section .quote {
+    color: #01a0c6;
+    font-size: 12px; }
+  #company-section .company-author-quote::before {
+    content: ' ';
+    color: #01a0c6;
+    margin: 0 15px 0 0;
+    border: 2px solid;
+    flex-wrap: nowrap;
+    flex-direction: row; }
 
 /*# sourceMappingURL=site.css.map */

@@ -1,6 +1,6 @@
 {{ $current := . }}
 <nav class="navbar navbar-expand-md navbar-light bg-light fixed-top shadow-sm" id="navbar-main-menu">
-    <div class="container">
+    <div class="container-fluid">
         <a class="navbar-brand font-weight-bold" href="{{ .Site.BaseURL }}">
           <svg xmlns="http://www.w3.org/2000/svg" width="128.86" height="22.884" viewBox="0 0 128.86 22.884">
             <g id="GROW-logo" transform="translate(-50 -439)">
@@ -25,12 +25,6 @@
             {{- end -}}
             {{ with .Site.Menus.main }}
                 {{ range . }}
-
-
-      	             <!-- <li class="nav-item"><a class="nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li> -->
-
-
-
                     <li class="nav-item{{ if $current.IsMenuCurrent "main" . }} active{{ end }}"><a class="nav-link" href="{{ .URL | relLangURL }}">{{ .Name }}</a></li>
                 {{ end }}
             {{ end }}
