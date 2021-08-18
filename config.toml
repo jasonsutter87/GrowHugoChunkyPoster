@@ -7,21 +7,42 @@ theme = "chunkyPoster"
 
 [menu]
   [[menu.main]]
-    identifier = "home"
-    name = "Home"
-    url = "/"
-    weight = 10
+    identifier = "services"
+    name = "Services"
+    url = "/services/"
+    weight = 1
   [[menu.main]]
-    identifier = "about"
-    name = "About"
-    url = "/about/"
+    identifier = "portfolio"
+    name = "Portfolio"
+    url = "/portfolio/"
+    weight = 2
+  [[menu.main]]
+    identifier = "company"
+    name = "Company"
+    url = "/company/"
+    weight = 3
+  [[menu.main]]
+    identifier = "careers"
+    name = "Careers"
+    url = "/careers/"
+    weight = 4
+  [[menu.main]]
+    identifier = "blog"
+    name = "Blog"
+    url = "/blog/"
     weight = 5
 
-  [[menu.main]]
-      identifier = "post"
-      name = "Posts"
-      url = "/post/"
-      weight = 0
+
+
+
+
+
+
+
+
+
+
+
 
 [taxonomies]
 category = "categories"
