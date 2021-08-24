@@ -1,42 +1,634 @@
+/*SITE HELPERS*/
+$primary: #CC9F52; //Gold
+$secondary: darken($primary, 30%); //Dark Gold
+
 $GrowBlue: #01a0c6;
 $white: #fff;
 $light: #e8e6e6;
 $black: #000;
 
-.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
-    color: $black;
+
+$white: #FFFFFF; //White
+$superLight: #F4F4F4; //super light grey
+$mid: #CED2D3; //mid grey
+$darkgrey: #535659; //mid grey
+$black: #222222; //black
+
+
+$font-size: 16px;
+$line-height: 24px;
+
+$font-weight: 300;
+$mid-font-weight: 400;
+$heavy-font-weight: 600;
+$btn-padding-size: 30px;
+$transition-speed: .5s;
+$gutter-size: 15px;
+
+$logo-size: 250px;
+
+$font-family: 'Montserrat', sans-serif !important;
+
+
+
+
+//////////////////////////////////////////////////////////////
+//                                                          ||
+//                   HTML/Body/Containers                   ||
+//                                                          ||
+//////////////////////////////////////////////////////////////
+// html, body {
+//     font-size: $font-size;
+//     font-family: $font-family;
+//     margin: 0;
+//     font-weight: $font-weight;
+//     line-height: $line-height;
+//     color: $black;
+//     text-align: left;
+//     height: 100%;
+// }
+//
+// #home-container {
+//     position: relative;
+//     min-height: 100vh;
+//
+//     #home-main {
+//         padding-bottom: 275px;
+//
+//         @media (min-width: 992px) {
+//             padding-bottom: 150px;
+//         }
+//
+//         @media (min-width: 1200px) {
+//             padding-bottom: 80px;
+//         }
+//     }
+// }
+//
+.site-container-1400 {
+    padding-left: $gutter-size;
+    padding-right: $gutter-size;
+    margin: 0 auto;
+    position: relative;
+    max-width: 1400px;
+    width: 100%;
 }
 
+
+
+
+//////////////////////////////////////////////////////////////
+//                                                          ||
+//                  HTML Utilities Class                    ||
+//                                                          ||
+//////////////////////////////////////////////////////////////
 .ul-reset {
     margin: 0;
     padding: 0;
     list-style-type: none;
 }
 
-.btn-primary {
-  background-color: $GrowBlue !important;
-  padding: 10px 25px;
-  color: $white;
-  border: 2px solid $GrowBlue !important;
-  text-decoration: none !important;
-  font-weight: 600;
 
-  &:hover,
-  &:active{
-    background-color: transparent !important;
-    color: $GrowBlue;
-  }
+.section-overlay {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: transparentize($black, .2);
 }
+
+.sr-only {
+    border: 0;
+    clip: rect(0,0,0,0);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    width: 1px;
+}
+
+//////////////////////////////////////////////////////////////
+//                                                          ||
+//                       Colors                             ||
+//                                                          ||
+//////////////////////////////////////////////////////////////
+.primary-text {
+    color: $primary !important;
+}
+
+.secondary-text {
+    color: $secondary !important;
+}
+
+.white-text {
+    color: $white !important;
+}
+
+.superLight-text {
+    color: $superLight !important;
+}
+
+
+.mid-text {
+    color: $mid !important;
+}
+
+.black-text {
+    color: $black !important;
+}
+
+
+.high-contrast {
+    .primary-text,
+    .secondary-text {
+        color: $black;
+    }
+}
+
+//////////////////////////////////////////////////////////////
+//                                                          ||
+//                  Background Colors                       ||
+//                                                          ||
+//////////////////////////////////////////////////////////////
+.primary-bg {
+    background-color: $primary;
+}
+
+.secondary-bg {
+    background-color: $secondary;
+}
+
 
 .white-bg {
     background-color: $white;
 }
 
+.superLight-bg {
+    background-color: $superLight;
+}
 
 .light-bg {
     background-color: $light;
 }
 
+
+.mid-bg {
+    background-color: $mid;
+}
+
+.black-bg {
+    background-color: $black;
+}
+
+
+
+//////////////////////////////////////////////////////////////
+//                                                          ||
+//                     Link Colors                          ||
+//                                                          ||
+//////////////////////////////////////////////////////////////
+
+.primary-link {
+    color: $primary !important;
+    text-decoration: none;
+    font-weight: $heavy-font-weight !important;
+    text-transform: uppercase;
+
+    &:hover,
+    &:active {
+        color: $secondary !important;
+    }
+}
+
+
+
+//////////////////////////////////////////////////////////////
+//                                                          ||
+//                       Buttons                            ||
+//                                                          ||
+//////////////////////////////////////////////////////////////
+
+
+/////////////////////////////
+//      Buttons Styles     //
+/////////////////////////////
+
+.btn-primary {
+  background-color: $GrowBlue !important;
+   padding: 10px 25px;
+   color: $white;
+   border: 2px solid $GrowBlue !important;
+   text-decoration: none !important;
+   font-weight: 600;
+
+   &:hover,
+   &:active{
+     background-color: transparent !important;
+     color: $GrowBlue;
+   }
+}
+
+.btn-primary-long {
+    width: 100%;
+}
+
+
+//////////////////////////////////////////////////////////////
+//                                                          ||
+//                     Header Styles                        ||
+//                                                          ||
+//////////////////////////////////////////////////////////////
+h1,
+.h1-heading {
+    font-size: calc(#{$font-size} * 2.25) !important;
+    font-weight: $font-weight !important;
+    line-height: calc(#{$line-height} * 1.83) !important;
+    font-family: $font-family;
+    text-transform: uppercase;
+}
+
+h2,
+.h2-heading {
+    font-size: calc(#{$font-size} * 1.75) !important;
+    font-weight: $font-weight !important;
+    line-height: calc(#{$line-height} * 1.33) !important;
+    font-family: $font-family;
+    text-transform: uppercase;
+}
+
+.SubHead,
+h3,
+.h3-heading {
+    font-size: calc(#{$font-size} * 1.5) !important;
+    font-weight: $font-weight !important;
+    line-height: calc(#{$line-height} * 1.16) !important;
+    font-family: $font-family;
+    text-transform: uppercase;
+}
+
+h4,
+.h4-heading {
+    font-size: calc(#{$font-size} * 1.25) !important;
+    font-weight: $font-weight !important;
+    line-height: $line-height !important;
+    font-family: $font-family;
+    text-transform: uppercase;
+}
+
+h5,
+.h5-heading {
+    font-size: calc(#{$font-size} * 1.125) !important;
+    font-weight: $font-weight !important;
+    line-height: calc(#{$line-height} * 0.916) !important;
+    font-family: $font-family;
+}
+
+h6,
+.h6-heading {
+    font-size: calc(#{$font-size} * 0.875) !important;
+    font-weight: $heavy-font-weight !important;
+    line-height: calc(#{$line-height} * 0.75) !important;
+    font-family: $font-family;
+}
+
+p {
+    font-size: $font-size !important;
+    font-weight: $font-weight !important;
+    line-height: $line-height !important;
+    font-family: $font-family;
+}
+
+
+
+
+@media (min-width: 992px) {
+    h1,
+    .h1-heading {
+        font-size: calc(#{$font-size} * 3.5) !important;
+        line-height: calc(#{$line-height} * 2.83) !important;
+    }
+
+    h2,
+    .h2-heading {
+        font-size: calc(#{$font-size} * 2.25) !important;
+        line-height: calc(#{$line-height} * 1.83) !important;
+    }
+
+    .SubHead,
+    h3,
+    .h3-heading {
+        font-size: calc(#{$font-size} * 1.875) !important;
+        line-height: calc(#{$line-height} * 1.5) !important;
+    }
+
+    h4,
+    .h4-heading {
+        font-size: calc(#{$font-size} * 1.5) !important;
+        line-height: calc(#{$line-height} * 1.166) !important;
+    }
+
+    h5,
+    .h5-heading {
+        font-size: calc(#{$font-size} * 1.25) !important;
+        line-height: $line-height !important;
+    }
+
+    p {
+        font-size: calc(#{$font-size} * 1) !important;
+        line-height: calc(#{$line-height} * 1) !important;
+    }
+}
+
+
+
+//////////////////////////////////////////////////////////////
+//                                                          ||
+//                     Main Navigation                      ||
+//                                                          ||
+//////////////////////////////////////////////////////////////
+
+
+.navbar{
+  padding: 0 25px;
+  background-color: $white;
+
+  @media (min-width: 1200px) {
+    padding: 25px 50px;
+  }
+}
+
+// .main-navigation {
+//     z-index: 15000;
+//     position: fixed;
+//     top: 0;
+//     right: 0;
+//     left: 0;
+//     transition: .6s;
+//     border-bottom: 1px solid #CED2D3;
+//     background-color: $white;
+//
+//     @media (min-width: 992px) {
+//         box-shadow: unset;
+//         background-color: unset;
+//     }
+// }
+//
+//
+// .top-main-nav {
+//     background-color: $black;
+//
+//
+//     @media (min-width: 1200px) {
+//         padding: 0 50px;
+//     }
+//
+//     .row {
+//         height: 50px;
+//     }
+//
+//     a {
+//         color: $white;
+//         text-decoration: none !important;
+//
+//         &:hover,
+//         &:active {
+//             color: $primary !important;
+//         }
+//     }
+// }
+//
+// .bottom-main-nav {
+//     background-color: $superLight;
+//     border-bottom: 1px solid $mid;
+//
+//
+//
+//     @media (min-width: 1200px) {
+//         padding: 0 50px;
+//     }
+//
+//
+//     .row {
+//         height: 70px;
+//     }
+//
+//     a:not('.btn-info') {
+//         color: $black;
+//         text-decoration: none;
+//
+//         &:hover,
+//         &:active {
+//             color: $primary !important;
+//         }
+//     }
+// }
+//
+//
+// .nav-border-right {
+//     border-right: 1px solid $primary;
+// }
+//
+//
+// .header-logo {
+//     svg {
+//         width: $logo-size;
+//         height: auto;
+//
+//
+//         .cls-1 {
+//             fill: $black;
+//         }
+//     }
+// }
+//
+// .accessibility-icon,
+// .header-phone {
+//     i, svg {
+//         color: $primary;
+//     }
+// }
+//
+//
+// .nav-menu-item-top {
+//     background: transparent;
+//     border: none;
+//     padding: 0 calc(#{$btn-padding-size} * .35);
+//     align-items: center;
+//
+//     @media (min-width: 992px) {
+//         display: inline-flex;
+//     }
+//
+//     a {
+//         color: $primary !important;
+//         font-size: $font-size !important;
+//         font-weight: $heavy-font-weight;
+//         line-height: calc(#{$line-height} * 2);
+//         text-transform: uppercase;
+//
+//         svg, i {
+//             color: $primary !important;
+//         }
+//
+//
+//         &:hover,
+//         &:active {
+//             color: $white !important;
+//             text-decoration: none;
+//
+//             svg, i {
+//                 color: $white !important;
+//             }
+//         }
+//     }
+// }
+//
+// .nav-menu-item {
+//     background: transparent;
+//     border: none;
+//     align-items: center;
+//     padding: 0 10px;
+//
+//     @media (min-width: 992px) {
+//         display: inline-flex;
+//         padding: 0 5px;
+//     }
+//
+//     @media (min-width: 1200px) {
+//         padding: 0 8px;
+//     }
+//
+//
+//     @media (min-width: 1350px) {
+//         padding: 0 calc(#{$btn-padding-size} * .35);
+//     }
+//
+//     svg, i {
+//         color: $black !important;
+//     }
+//
+//
+//     .login-svg {
+//         color: $primary !important;
+//     }
+//
+//     &:hover,
+//     &:active {
+//         color: $white !important;
+//     }
+//
+//
+//     a {
+//         color: $black !important;
+//         font-size: $font-size !important;
+//         font-weight: $mid-font-weight;
+//         line-height: calc(#{$line-height} * .83);
+//         text-decoration: none;
+//         text-transform: uppercase;
+//
+//         &:hover,
+//         &:active {
+//             color: $primary !important;
+//         }
+//     }
+//
+//     .submenu {
+//         a {
+//             color: $black !important;
+//             line-height: $line-height;
+//             text-decoration: none;
+//
+//             &:hover,
+//             &:active {
+//                 color: $primary !important;
+//             }
+//         }
+//     }
+// }
+//
+//
+// .accessibility-btn {
+//     background-color: transparent;
+//     color: $white;
+//     border: none;
+// }
+//
+
+
+
+
+
+//////////////////////////////////////////////////////////////
+//                                                          ||
+//                  Mobile Navigation                       ||
+//                                                          ||
+//////////////////////////////////////////////////////////////
+
+
+
+//////////////////////////////////////////////////////////////
+//                                                          ||
+//                  CTA  +   Footer                         ||
+//                                                          ||
+//////////////////////////////////////////////////////////////
+
+footer {
+  background-color: $black;
+  padding: 25px 0;
+
+  @media (min-width: 1200px) {
+    padding: 25px 50px 15px;
+  }
+
+  color: $white;
+
+  a {
+    color: $GrowBlue !important;
+
+      &:active,
+      &:hover {
+        color: $white !important;
+      }
+  }
+  .social-nav-item{
+    padding: 0 15px ;
+
+      .social-icon {
+        color: $white !important;
+        font-size: 1.25rem;
+
+        &:active,
+        &:hover {
+          color: $GrowBlue !important;
+        }
+      }
+
+      &:last-child{
+        padding-right: 0;
+      }
+  }
+
+  .footer-policy-link {
+    color: $white !important;
+    text-decoration: none;
+
+    &:active,
+    &:hover {
+      color: $GrowBlue !important;
+    }
+  }
+
+}
+
+
+
+//////////////////////////////////////////////////////////////
+//                                                          ||
+//                      Home Page                           ||
+//                                                          ||
+//////////////////////////////////////////////////////////////
 
 #index-jumbotron-section{
   margin-top: 56px;
@@ -71,6 +663,15 @@ $black: #000;
 
 #our-services-section{
   padding: 50px 0;
+
+  .core-service {
+    padding: 25px;
+  }
+
+  .card-title {
+    color: $GrowBlue;
+  }
+
 }
 
 #company-section{
@@ -96,5 +697,24 @@ $black: #000;
     border: 2px solid;
     flex-wrap: nowrap;
     flex-direction: row;
+  }
+}
+
+
+#cta-section{
+  padding: 50px 0;
+  background: rgb(60,60,60);
+  background: linear-gradient(90deg, rgba(60,60,60,1) 0%, rgba(60,60,60,1) 49.99%, rgba(1,160,198,1) 50%, rgba(1,160,198,1) 100%);
+
+  color: $white;
+  text-decoration: none;
+
+  a {
+      color: $white !important;
+
+      &:active,
+      &:hover {
+        color: $GrowBlue !important;
+      }
   }
 }
