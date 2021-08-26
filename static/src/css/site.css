@@ -22,6 +22,10 @@ html, body {
   padding: 0;
   list-style-type: none; }
 
+@media (min-width: 1200px) {
+  .two-column {
+    column-count: 2; } }
+
 .section-overlay {
   position: absolute;
   top: 0;
@@ -201,13 +205,15 @@ p {
   .link-style:hover, .link-style:active {
     color: #151515 !important; }
 
-.list-item-style {
+.list-item-style li {
   font-size: calc(14px * 1.285) !important;
   font-weight: 400 !important;
   line-height: calc(24px * 1.166) !important;
   font-family: "Mulish", sans-serif !important;
-  padding: 10px;
-  margin: 20px; }
+  padding: 10px 0; }
+
+.list-item-style li:first-child {
+  padding-top: 0; }
 
 .text-icon-cta {
   font-size: 14px !important;
@@ -239,13 +245,22 @@ p {
       border-bottom: 2px solid #01A0C6; }
 
 #cta-section {
-  background: #3c3c3c;
-  background: linear-gradient(90deg, #3c3c3c 0%, #3c3c3c 49.99%, #01a0c6 50%, #01a0c6 100%);
   color: #FFFFFF;
   text-decoration: none;
   display: flex;
-  align-items: center;
-  height: 400px; }
+  align-items: center; }
+  #cta-section .cta-jobs-div {
+    background-color: #383838; }
+  #cta-section .cta-form-div {
+    background-color: #01A0C6; }
+  @media (min-width: 992px) {
+    #cta-section {
+      background: #3c3c3c;
+      background: linear-gradient(90deg, #3c3c3c 0%, #3c3c3c 49.99%, #01a0c6 50%, #01a0c6 100%);
+      height: 400px; }
+      #cta-section .cta-jobs-div,
+      #cta-section .cta-form-div {
+        background-color: unset; } }
   #cta-section a {
     color: #FFFFFF !important; }
     #cta-section a:active, #cta-section a:hover {
@@ -284,11 +299,16 @@ footer {
     padding: 0 15px; }
     footer .social-nav-item .social-icon {
       color: #FFFFFF !important;
-      font-size: 1.25rem; }
+      font-size: 1.428rem; }
       footer .social-nav-item .social-icon:active, footer .social-nav-item .social-icon:hover {
         color: #01A0C6 !important; }
-    footer .social-nav-item:last-child {
-      padding-right: 0; }
+    footer .social-nav-item:first-child {
+      padding-left: 0; }
+    @media (min-width: 992px) {
+      footer .social-nav-item:first-child {
+        padding-left: unset; }
+      footer .social-nav-item:last-child {
+        padding-right: 0; } }
   footer .footer-policy-link {
     color: #FFFFFF !important;
     text-decoration: none; }
@@ -297,10 +317,16 @@ footer {
 
 #index-jumbotron-section {
   margin-top: 56px;
-  padding: 50px 0; }
+  padding: 25px 0; }
+  @media (min-width: 992px) {
+    #index-jumbotron-section {
+      padding: 50px 0; } }
 
 #our-portfolio-section {
-  padding: 50px 0; }
+  padding: 25px 0; }
+  @media (min-width: 992px) {
+    #our-portfolio-section {
+      padding: 50px 0; } }
 
 #testimonial-section .testimonial-bg {
   padding: 35px 25px;
@@ -310,7 +336,10 @@ footer {
   background-position: center; }
 
 #cdss-section {
-  padding: 50px 0; }
+  padding: 25px 0; }
+  @media (min-width: 992px) {
+    #cdss-section {
+      padding: 50px 0; } }
   #cdss-section .cdss-tiles-bg {
     border: 1px solid #E6E6E6;
     background-color: #FFFFFF;
@@ -324,17 +353,24 @@ footer {
     font-family: "Mulish", sans-serif !important; }
 
 #our-services-section {
-  padding: 50px 0; }
-  #our-services-section .core-service {
-    padding: 15px; }
+  padding: 25px 0; }
+  @media (min-width: 992px) {
+    #our-services-section {
+      padding: 50px 0; } }
+  @media (min-width: 992px) {
+    #our-services-section .core-service {
+      padding: 15px; } }
   #our-services-section .card-title {
     color: #01A0C6; }
 
 #company-section {
-  padding: 50px 0; }
+  padding: 25px 0; }
+  @media (min-width: 992px) {
+    #company-section {
+      padding: 50px 0; } }
   #company-section .index-company-bg {
     background-color: #FFFFFF;
-    background-image: url("/images/home/GROW-graphic.png");
+    background-image: url("/images/desktop/home/GROW-graphic.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -349,5 +385,21 @@ footer {
     border: 2px solid;
     flex-wrap: nowrap;
     flex-direction: row; }
+
+#services-jumbotron-section {
+  margin-top: 56px;
+  padding: 25px 0; }
+  @media (min-width: 992px) {
+    #services-jumbotron-section {
+      padding: 50px 0; } }
+
+.services-bg {
+  background-color: #FFFFFF;
+  border: 1px solid #E6E6E6;
+  padding: 50px 25px !important;
+  margin-bottom: 50px; }
+
+.services-bg:last-child {
+  margin-bottom: 0; }
 
 /*# sourceMappingURL=site.css.map */

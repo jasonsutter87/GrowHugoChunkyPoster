@@ -72,6 +72,13 @@ html, body {
   list-style-type: none;
 }
 
+.two-column {
+
+  @media (min-width: 1200px) {
+    column-count: 2;
+  }
+}
+
 .section-overlay {
   position: absolute;
   top: 0;
@@ -332,14 +339,18 @@ p {
   }
 }
 
-.list-item-style {
+.list-item-style li {
   font-size: calc(#{$font-size} * 1.285) !important;
   font-weight: $font-weight !important;
   line-height: calc(#{$line-height} * 1.166) !important;
   font-family: $font-family;
-  padding: 10px;
-  margin: 20px;
+  padding: 10px 0;
 }
+
+.list-item-style li:first-child {
+  padding-top: 0;
+}
+
 
 .text-icon-cta {
   font-size: $font-size !important;
@@ -402,13 +413,28 @@ p {
 //                                                          ||
 //////////////////////////////////////////////////////////////
 #cta-section {
-  background: rgb(60,60,60);
-  background: linear-gradient(90deg, rgba(60,60,60,1) 0%, rgba(60,60,60,1) 49.99%, rgba(1,160,198,1) 50%, rgba(1,160,198,1) 100%);
+  .cta-jobs-div {
+      background-color: $darkgrey;
+  }
+
+  .cta-form-div {
+    background-color: $primary;
+  }
+
+  @media (min-width: 992px) {
+    .cta-jobs-div,
+    .cta-form-div  {
+        background-color: unset;
+    }
+
+    background: rgb(60,60,60);
+    background: linear-gradient(90deg, rgba(60,60,60,1) 0%, rgba(60,60,60,1) 49.99%, rgba(1,160,198,1) 50%, rgba(1,160,198,1) 100%);
+    height: 400px;
+  }
   color: $white;
   text-decoration: none;
   display: flex;
   align-items: center;
-  height: 400px;
 
   a {
     color: $white !important;
@@ -468,7 +494,7 @@ footer {
 
     .social-icon {
       color: $white !important;
-      font-size: 1.25rem;
+      font-size: 1.428rem;
 
       &:active,
       &:hover {
@@ -476,9 +502,21 @@ footer {
       }
     }
 
-    &:last-child {
-      padding-right: 0;
+    &:first-child {
+      padding-left: 0;
     }
+
+    @media (min-width: 992px) {
+      &:first-child {
+        padding-left: unset;
+      }
+
+      &:last-child {
+        padding-right: 0;
+      }
+    }
+
+
   }
 
   .footer-policy-link {
@@ -503,11 +541,19 @@ footer {
 
 #index-jumbotron-section {
   margin-top: 56px;
-  padding: 50px 0;
+  padding: 25px 0;
+
+  @media (min-width: 992px) {
+       padding: 50px 0;
+   }
 }
 
 #our-portfolio-section {
-  padding: 50px 0;
+  padding: 25px 0;
+
+  @media (min-width: 992px) {
+       padding: 50px 0;
+   }
 }
 
 #testimonial-section {
@@ -521,7 +567,11 @@ footer {
 }
 
 #cdss-section {
-  padding: 50px 0;
+  padding: 25px 0;
+
+  @media (min-width: 992px) {
+       padding: 50px 0;
+   }
 
   .cdss-tiles-bg{
     border: 1px solid $light;
@@ -542,10 +592,16 @@ footer {
 }
 
 #our-services-section {
-  padding: 50px 0;
+  padding: 25px 0;
+
+  @media (min-width: 992px) {
+       padding: 50px 0;
+   }
 
   .core-service {
-    padding: 15px;
+    @media (min-width: 992px) {
+         padding: 15px;
+     }
   }
 
   .card-title {
@@ -554,11 +610,15 @@ footer {
 }
 
 #company-section {
-  padding: 50px 0;
+  padding: 25px 0;
+
+  @media (min-width: 992px) {
+       padding: 50px 0;
+   }
 
   .index-company-bg {
     background-color: $white;
-    background-image: url("/images/home/GROW-graphic.png");
+    background-image: url("/images/desktop/home/GROW-graphic.png");
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
@@ -579,3 +639,31 @@ footer {
     flex-direction: row;
   }
 }
+
+
+//////////////////////////////////////////////////////////////
+//                                                          ||
+//                 Services  Page                           ||
+//                                                          ||
+//////////////////////////////////////////////////////////////
+
+
+#services-jumbotron-section {
+  margin-top: 56px;
+  padding: 25px 0;
+
+  @media (min-width: 992px) {
+       padding: 50px 0;
+   }
+}
+
+.services-bg {
+  background-color: $white;
+  border: 1px solid $light;
+  padding: 50px 25px !important;
+  margin-bottom: 50px;
+}
+
+.services-bg:last-child {
+    margin-bottom: 0;
+ }
