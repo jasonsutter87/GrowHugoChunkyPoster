@@ -9,12 +9,24 @@ html, body {
   text-align: left;
   height: 100%; }
 
+#main-container {
+  position: relative;
+  min-height: 100vh; }
+
 .site-container-1400 {
   padding-left: 15px;
   padding-right: 15px;
   margin: 0 auto;
   position: relative;
   max-width: 1400px;
+  width: 100%; }
+
+.site-container-992 {
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+  position: relative;
+  max-width: 992px;
   width: 100%; }
 
 .ul-reset {
@@ -97,7 +109,7 @@ html, body {
 .btn-primary {
   background-color: #01A0C6 !important;
   padding: 15px 30px;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   border: 1px solid #01A0C6 !important;
   text-decoration: none !important;
   font-weight: 800;
@@ -105,7 +117,7 @@ html, body {
   .btn-primary:focus, .btn-primary:active, .btn-primary:hover {
     background-color: transparent !important;
     border: 1px solid #151515 !important;
-    color: #151515;
+    color: #151515 !important;
     box-shadow: unset !important; }
 
 .btn-primary-long {
@@ -114,27 +126,27 @@ html, body {
 .btn-secondary {
   background-color: transparent !important;
   padding: 10px;
-  color: #151515;
+  color: #151515 !important;
   border: 1px solid #151515 !important;
   text-decoration: none !important;
   font-weight: 800;
   font-size: calc(14px * 1.142) !important; }
   .btn-secondary:focus, .btn-secondary:active, .btn-secondary:hover {
     background-color: #151515 !important;
-    color: #FFFFFF;
+    color: #FFFFFF !important;
     box-shadow: unset !important; }
 
 .btn-info {
   background-color: transparent !important;
   padding: 15px 30px;
-  color: #FFFFFF;
+  color: #FFFFFF !important;
   border: 1px solid #FFFFFF !important;
   text-decoration: none !important;
   font-weight: 800;
   font-size: calc(14px * 1.142) !important; }
   .btn-info:focus, .btn-info:active, .btn-info:hover {
     background-color: #FFFFFF !important;
-    color: #151515;
+    color: #151515 !important;
     box-shadow: unset !important; }
 
 .h1-heading,
@@ -401,5 +413,31 @@ footer {
 
 .services-bg:last-child {
   margin-bottom: 0; }
+
+#inner-jumbotron-section {
+  margin-top: 56px;
+  padding: 25px 0; }
+  @media (min-width: 992px) {
+    #inner-jumbotron-section {
+      height: 175px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: row;
+      flex-wrap: nowrap;
+      align-content: center; } }
+
+.contact-form-input {
+  background: none;
+  border: 0 !important;
+  border-radius: 0 !important;
+  box-shadow: none !important;
+  border-bottom: 1px solid #151515 !important;
+  width: 100%;
+  margin: 10px 0;
+  color: #151515; }
+  .contact-form-input::placeholder {
+    color: #151515;
+    font-weight: 700; }
 
 /*# sourceMappingURL=site.css.map */
