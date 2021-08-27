@@ -274,7 +274,8 @@ p {
       #cta-section .cta-form-div {
         background-color: unset; } }
   #cta-section a {
-    color: #FFFFFF !important; }
+    color: #FFFFFF !important;
+    font-size: calc(14px * 1.428); }
     #cta-section a:active, #cta-section a:hover {
       color: #01A0C6 !important; }
   #cta-section .footer-form-input {
@@ -342,7 +343,7 @@ footer {
 
 #testimonial-section .testimonial-bg {
   padding: 35px 25px;
-  background-image: url("/images/home/GROW-myDCAS-CaseStudy.jpg");
+  background-image: url("/images/desktop/home/GROW-myDCAS-CaseStudy.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center; }

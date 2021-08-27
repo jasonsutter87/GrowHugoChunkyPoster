@@ -18,7 +18,10 @@ $btn-padding-size: 30px;
 $transition-speed: 0.5s;
 $gutter-size: 15px;
 $logo-size: 250px;
-$font-family: 'Mulish', sans-serif !important; //////////////////////////////////////////////////////////////
+$font-family: 'Mulish', sans-serif !important;
+
+
+//////////////////////////////////////////////////////////////
 //                                                          ||
 //                   HTML/Body/Containers                   ||
 //                                                          ||
@@ -61,12 +64,12 @@ html, body {
   max-width: 992px;
   width: 100%;
 }
+
 //////////////////////////////////////////////////////////////
 //                                                          ||
 //                  HTML Utilities Class                    ||
 //                                                          ||
 //////////////////////////////////////////////////////////////
-
 .ul-reset {
   margin: 0;
   padding: 0;
@@ -74,7 +77,6 @@ html, body {
 }
 
 .two-column {
-
   @media (min-width: 1200px) {
     column-count: 2;
   }
@@ -99,6 +101,7 @@ html, body {
   position: absolute;
   width: 1px;
 }
+
 //////////////////////////////////////////////////////////////
 //                                                          ||
 //                       Colors                             ||
@@ -131,12 +134,12 @@ html, body {
 .black-text {
   color: $black !important;
 }
+
 //////////////////////////////////////////////////////////////
 //                                                          ||
 //                  Background Colors                       ||
 //                                                          ||
 //////////////////////////////////////////////////////////////
-
 .primary-bg {
   background-color: $primary !important;
 }
@@ -164,12 +167,12 @@ html, body {
 .black-bg {
   background-color: $black !important;
 }
+
 //////////////////////////////////////////////////////////////
 //                                                          ||
 //                     Link Colors                          ||
 //                                                          ||
 //////////////////////////////////////////////////////////////
-
 .primary-link {
   color: $primary !important;
   text-decoration: none;
@@ -181,15 +184,12 @@ html, body {
     color: $black !important;
   }
 }
+
 //////////////////////////////////////////////////////////////
 //                                                          ||
 //                       Buttons                            ||
 //                                                          ||
 //////////////////////////////////////////////////////////////
-/////////////////////////////
-//      Buttons Styles     //
-/////////////////////////////
-
 .btn-primary {
   background-color: $primary !important;
   padding: 15px 30px;
@@ -213,7 +213,6 @@ html, body {
 .btn-primary-long {
   width: 100%;
 }
-
 
 .btn-secondary {
   background-color: transparent !important;
@@ -256,7 +255,6 @@ html, body {
 //                     Header Styles                        ||
 //                                                          ||
 //////////////////////////////////////////////////////////////
-
 .h1-heading,
 h1 {
   font-size: calc(#{$font-size} * 3.285) !important;
@@ -384,7 +382,6 @@ p {
   }
 }
 
-
 .nav-menu-item {
     padding: 0 15px;
 
@@ -438,6 +435,7 @@ p {
 
   a {
     color: $white !important;
+    font-size: calc(#{$font-size} * 1.428);
 
     &:active,
     &:hover {
@@ -559,7 +557,7 @@ footer {
 #testimonial-section {
   .testimonial-bg {
     padding: 35px 25px;
-    background-image: url("/images/home/GROW-myDCAS-CaseStudy.jpg");
+    background-image: url("/images/desktop/home/GROW-myDCAS-CaseStudy.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -640,7 +638,6 @@ footer {
   }
 }
 
-
 //////////////////////////////////////////////////////////////
 //                                                          ||
 //                 Services  Page                           ||
@@ -674,6 +671,7 @@ footer {
  //                    Inner  Page                           ||
  //                                                          ||
  //////////////////////////////////////////////////////////////
+
 #inner-jumbotron-section {
   margin-top: 56px;
   padding: 25px 0;
