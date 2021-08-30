@@ -373,6 +373,11 @@ p {
 //                                                          ||
 //////////////////////////////////////////////////////////////
 
+.main-navigation{
+    position: relative;
+    z-index: 150;
+}
+
 .navbar {
   padding: 0 25px;
   background-color: $white;
@@ -404,6 +409,90 @@ p {
 //                  Mobile Navigation                       ||
 //                                                          ||
 //////////////////////////////////////////////////////////////
+
+.mobile-nav {
+    position: absolute;
+    height: 100vh;
+    top: 0;
+    left: -10000vw;
+    width: 100vw;
+    overflow: auto;
+    margin: 0;
+    transition: left $transition-speed;
+    z-index: 149;
+    background-color: $white;
+}
+
+.nav-btn-close,
+.nav-btn-open {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.75rem;
+
+
+  &:focus{
+    outline: none;
+  }
+}
+
+#close-mobile-nav {
+  display: none;
+}
+
+
+.mobile-nav-active {
+  #close-mobile-nav {
+    display: block;
+  }
+
+  #open-mobile-nav{
+    display: none;
+  }
+}
+
+.mobile-nav-menu-item {
+  border-top: 1px solid $black;
+
+  a {
+    text-decoration: none !important;
+    font-weight: $heavy-font-weight;
+    font-size: 1.25rem;
+    color: $black;
+    width: 100%;
+    display: flex;
+    padding: .5rem 2rem;
+  }
+
+
+  &:hover,
+  &:active {
+    background-color: $primary;
+    a {
+      color: $white;
+    }
+  }
+}
+
+
+.mobile-nav-menu-item:last-child {
+  border-bottom: 1px solid $black;
+}
+
+
+
+
+/////////////////////////////
+//    Active Mobile Nav    //
+/////////////////////////////
+
+.mobile-nav-active {
+    .mobile-nav {
+        left: 0;
+        transition: $transition-speed;
+        top: 0;
+    }
+}
+
 //////////////////////////////////////////////////////////////
 //                                                          ||
 //                  CTA  +   Footer                         ||
@@ -654,14 +743,17 @@ footer {
    }
 }
 
+.service-section {
+  margin-bottom: 50px;
+}
+
 .services-bg {
   background-color: $white;
   border: 1px solid $light;
   padding: 50px 25px !important;
-  margin-bottom: 50px;
 }
 
-.services-bg:last-child {
+.service-section:last-child {
     margin-bottom: 0;
  }
 
@@ -701,5 +793,485 @@ footer {
   &::placeholder {
     color: $black;
     font-weight:  $heavy-font-weight;
+  }
+}
+
+
+
+//////////////////////////////////////////////////////////////
+//                                                          ||
+//                  Company  Page                           ||
+//                                                          ||
+//////////////////////////////////////////////////////////////
+.company-team-member-image {
+  width: 100%;
+  max-width: 350px;
+}
+
+.team-member-screen-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: transparentize($black, 1);
+  transition: $transition-speed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  h3 {
+    color: $white !important;
+    opacity: 0;
+  }
+}
+
+.team-member-pos{
+  margin: 1rem 0;
+
+  .team-member-image {
+    position: relative;
+
+    .toby-bg{
+      background-image: url('../../images/desktop/company/team-member-toby-briggs.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .scott-bg{
+      background-image: url('../../images/desktop/company/team-member-scott-roberts.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .natalie-bg{
+      background-image: url('../../images/desktop/company/team-member-natalie-santana.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .michelle-bg{
+      background-image: url('../../images/desktop/company/team-member-michelle-ryan.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .heather-bg{
+      background-image: url('../../images/desktop/company/team-member-heather-briggs.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .raj-bg{
+      background-image: url('../../images/desktop/company/team-member-raj-kallem.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .jill-bg{
+      background-image: url('../../images/desktop/company/team-member-jill-briggs.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .marcelo-bg{
+      background-image: url('../../images/desktop/company/team-member-marcelo-gachet.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .melissa-bg{
+      background-image: url('../../images/desktop/company/team-member-melissa-zimmerman.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .marc-bg{
+      background-image: url('../../images/desktop/company/team-member-marc-riegel.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .todd-bg{
+      background-image: url('../../images/desktop/company/team-member-todd-fisher.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .jason-bg{
+      background-image: url('../../images/desktop/company/team-member-jason-sutter.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .josh-bg{
+      background-image: url('../../images/desktop/company/team-member-josh-nash.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .alan-bg{
+      background-image: url('../../images/desktop/company/team-member-alan-wong.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .mai-bg{
+      background-image: url('../../images/desktop/company/team-member-mai-lee.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .samantha-bg{
+      background-image: url('../../images/desktop/company/team-member-samantha-stoddard.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .stephanie-bg{
+      background-image: url('../../images/desktop/company/team-member-stephanie-jordin.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .anil-bg{
+      background-image: url('../../images/desktop/company/team-member-anil-suri.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .katrina-bg{
+      background-image: url('../../images/desktop/company/team-member-katrina-rodriguez.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .jeff-bg{
+      background-image: url('../../images/desktop/company/team-member-jeff-groves.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
+    .gus-bg{
+      background-image: url('../../images/desktop/company/team-member-gus.jpg');
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative;
+
+
+      &:hover{
+        .team-member-screen-overlay {
+          background-color: transparentize($black, .3);
+
+          h3 {
+            opacity: 1;
+          }
+        }
+      }
+    }
+
   }
 }

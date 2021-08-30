@@ -23,6 +23,9 @@
 <link rel="mask-icon" href="{{ "safari-pinned-tab.svg" | relURL }}" color="#0c344b">
 <link rel="icon" href="{{ "favicon.ico" | relURL }}">
 
+
+
+
 {{ if .Site.Params.prismJS.enable }}
     {{ if .Site.Params.prismJS.theme }}
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/prism/1.17.1/themes/prism-{{ .Site.Params.prismJS.theme }}.min.css">
@@ -45,8 +48,8 @@
 
 
 <link rel="stylesheet" href="{{ .Site.BaseURL }}src/css/site.css">
-<link rel="stylesheet" href="{{ .Site.BaseURL }}src/css/mario.css">
-<script type="text/javascript" src="{{ .Site.BaseURL }}src/js/site.js"></script>
+
+
 
 <link rel="canonical" href="{{ .Permalink }}">
 {{- with .OutputFormats.Get "RSS" }}

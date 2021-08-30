@@ -237,6 +237,10 @@ p {
   .text-icon-cta:hover, .text-icon-cta:active {
     color: #01A0C6 !important; }
 
+.main-navigation {
+  position: relative;
+  z-index: 150; }
+
 .navbar {
   padding: 0 25px;
   background-color: #FFFFFF; }
@@ -255,6 +259,58 @@ p {
     font-family: "Mulish", sans-serif !important; }
     .nav-menu-item .nav-item-link:hover, .nav-menu-item .nav-item-link:active {
       border-bottom: 2px solid #01A0C6; }
+
+.mobile-nav {
+  position: absolute;
+  height: 100vh;
+  top: 0;
+  left: -10000vw;
+  width: 100vw;
+  overflow: auto;
+  margin: 0;
+  transition: left 0.5s;
+  z-index: 149;
+  background-color: #FFFFFF; }
+
+.nav-btn-close,
+.nav-btn-open {
+  background-color: transparent;
+  border: 0;
+  font-size: 1.75rem; }
+  .nav-btn-close:focus,
+  .nav-btn-open:focus {
+    outline: none; }
+
+#close-mobile-nav {
+  display: none; }
+
+.mobile-nav-active #close-mobile-nav {
+  display: block; }
+.mobile-nav-active #open-mobile-nav {
+  display: none; }
+
+.mobile-nav-menu-item {
+  border-top: 1px solid #151515; }
+  .mobile-nav-menu-item a {
+    text-decoration: none !important;
+    font-weight: 700;
+    font-size: 1.25rem;
+    color: #151515;
+    width: 100%;
+    display: flex;
+    padding: .5rem 2rem; }
+  .mobile-nav-menu-item:hover, .mobile-nav-menu-item:active {
+    background-color: #01A0C6; }
+    .mobile-nav-menu-item:hover a, .mobile-nav-menu-item:active a {
+      color: #FFFFFF; }
+
+.mobile-nav-menu-item:last-child {
+  border-bottom: 1px solid #151515; }
+
+.mobile-nav-active .mobile-nav {
+  left: 0;
+  transition: 0.5s;
+  top: 0; }
 
 #cta-section {
   color: #FFFFFF;
@@ -406,13 +462,15 @@ footer {
     #services-jumbotron-section {
       padding: 50px 0; } }
 
+.service-section {
+  margin-bottom: 50px; }
+
 .services-bg {
   background-color: #FFFFFF;
   border: 1px solid #E6E6E6;
-  padding: 50px 25px !important;
-  margin-bottom: 50px; }
+  padding: 50px 25px !important; }
 
-.services-bg:last-child {
+.service-section:last-child {
   margin-bottom: 0; }
 
 #inner-jumbotron-section {
@@ -440,5 +498,281 @@ footer {
   .contact-form-input::placeholder {
     color: #151515;
     font-weight: 700; }
+
+.company-team-member-image {
+  width: 100%;
+  max-width: 350px; }
+
+.team-member-screen-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(21, 21, 21, 0);
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center; }
+  .team-member-screen-overlay h3 {
+    color: #FFFFFF !important;
+    opacity: 0; }
+
+.team-member-pos {
+  margin: 1rem 0; }
+  .team-member-pos .team-member-image {
+    position: relative; }
+    .team-member-pos .team-member-image .toby-bg {
+      background-image: url("../../images/desktop/company/team-member-toby-briggs.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .toby-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .toby-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .scott-bg {
+      background-image: url("../../images/desktop/company/team-member-scott-roberts.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .scott-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .scott-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .natalie-bg {
+      background-image: url("../../images/desktop/company/team-member-natalie-santana.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .natalie-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .natalie-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .michelle-bg {
+      background-image: url("../../images/desktop/company/team-member-michelle-ryan.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .michelle-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .michelle-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .heather-bg {
+      background-image: url("../../images/desktop/company/team-member-heather-briggs.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .heather-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .heather-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .raj-bg {
+      background-image: url("../../images/desktop/company/team-member-raj-kallem.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .raj-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .raj-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .jill-bg {
+      background-image: url("../../images/desktop/company/team-member-jill-briggs.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .jill-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .jill-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .marcelo-bg {
+      background-image: url("../../images/desktop/company/team-member-marcelo-gachet.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .marcelo-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .marcelo-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .melissa-bg {
+      background-image: url("../../images/desktop/company/team-member-melissa-zimmerman.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .melissa-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .melissa-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .marc-bg {
+      background-image: url("../../images/desktop/company/team-member-marc-riegel.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .marc-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .marc-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .todd-bg {
+      background-image: url("../../images/desktop/company/team-member-todd-fisher.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .todd-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .todd-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .jason-bg {
+      background-image: url("../../images/desktop/company/team-member-jason-sutter.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .jason-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .jason-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .josh-bg {
+      background-image: url("../../images/desktop/company/team-member-josh-nash.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .josh-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .josh-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .alan-bg {
+      background-image: url("../../images/desktop/company/team-member-alan-wong.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .alan-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .alan-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .mai-bg {
+      background-image: url("../../images/desktop/company/team-member-mai-lee.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .mai-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .mai-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .samantha-bg {
+      background-image: url("../../images/desktop/company/team-member-samantha-stoddard.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .samantha-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .samantha-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .stephanie-bg {
+      background-image: url("../../images/desktop/company/team-member-stephanie-jordin.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .stephanie-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .stephanie-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .anil-bg {
+      background-image: url("../../images/desktop/company/team-member-anil-suri.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .anil-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .anil-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .katrina-bg {
+      background-image: url("../../images/desktop/company/team-member-katrina-rodriguez.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .katrina-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .katrina-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .jeff-bg {
+      background-image: url("../../images/desktop/company/team-member-jeff-groves.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .jeff-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .jeff-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
+    .team-member-pos .team-member-image .gus-bg {
+      background-image: url("../../images/desktop/company/team-member-gus.jpg");
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-position: center;
+      width: 100%;
+      height: 300px;
+      position: relative; }
+      .team-member-pos .team-member-image .gus-bg:hover .team-member-screen-overlay {
+        background-color: rgba(21, 21, 21, 0.7); }
+        .team-member-pos .team-member-image .gus-bg:hover .team-member-screen-overlay h3 {
+          opacity: 1; }
 
 /*# sourceMappingURL=site.css.map */
