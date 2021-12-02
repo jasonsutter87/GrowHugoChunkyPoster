@@ -1,6 +1,6 @@
 backend:
   name: github
-  repo: jasonsutter87/GrowHugoChunkyPoster
+  repo: repo
   branch: master # Branch to update (optional; defaults to master)
 
 
@@ -13,12 +13,3 @@ public_folder: "/images/uploads" # The src attribute for uploaded media will beg
 
 
 collections:
-  - name: "post" # Used in routes, e.g., /admin/collections/blog
-    label: "Post" # Used in the UI
-    folder: "content/post" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
